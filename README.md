@@ -1,7 +1,7 @@
 homevisits
 ==========
 
-Thanks to https://github.com/richardshepherd for the template!
+Thanks to https://github.com/richardshepherd/Parallax-Scrolling for the template!
 
 License:
 
