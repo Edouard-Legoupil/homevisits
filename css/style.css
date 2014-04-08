@@ -1,0 +1,254 @@
+/**
+ * Parallax Scrolling Tutorial
+ * For Smashing Magazine
+ * July 2011
+ *  
+ * Author: Richard Shepherd
+ *		   www.richardshepherd.com
+ * 		   @richardshepherd   
+ */
+/* ************************************************* */
+/* *********************** FONT ******************** */
+/* ************************************************* */
+@font-face {
+    font-family: 'open_sanssemibold';
+    src: url('../font/OpenSans-Semibold-webfont.eot');
+    src: url('../font/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/OpenSans-Semibold-webfont.woff') format('woff'),
+         url('../font/OpenSans-Semibold-webfont.ttf') format('truetype'),
+         url('../font/OpenSans-Semibold-webfont.svg#open_sanssemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sansextrabold_italic';
+    src: url('../font/OpenSans-ExtraBoldItalic-webfont.eot');
+    src: url('../font/OpenSans-ExtraBoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/OpenSans-ExtraBoldItalic-webfont.woff') format('woff'),
+         url('../font/OpenSans-ExtraBoldItalic-webfont.ttf') format('truetype'),
+         url('../font/OpenSans-ExtraBoldItalic-webfont.svg#open_sansextrabold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sanssemibold_italic';
+    src: url('../font/OpenSans-SemiboldItalic-webfont.eot');
+    src: url('../font/OpenSans-SemiboldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/OpenSans-SemiboldItalic-webfont.woff') format('woff'),
+         url('../font/OpenSans-SemiboldItalic-webfont.ttf') format('truetype'),
+         url('../font/OpenSans-SemiboldItalic-webfont.svg#open_sanssemibold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../font/OpenSans-Regular-webfont.eot');
+    src: url('../font/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/OpenSans-Regular-webfont.woff') format('woff'),
+         url('../font/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('../font/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('../font/OpenSans-Light-webfont.eot');
+    src: url('../font/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/OpenSans-Light-webfont.woff') format('woff'),
+         url('../font/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('../font/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sanslight_italic';
+    src: url('../font/OpenSans-LightItalic-webfont.eot');
+    src: url('../font/OpenSans-LightItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/OpenSans-LightItalic-webfont.woff') format('woff'),
+         url('../font/OpenSans-LightItalic-webfont.ttf') format('truetype'),
+         url('../font/OpenSans-LightItalic-webfont.svg#open_sanslight_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sansitalic';
+    src: url('../font/OpenSans-Italic-webfont.eot');
+    src: url('../font/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/OpenSans-Italic-webfont.woff') format('woff'),
+         url('../font/OpenSans-Italic-webfont.ttf') format('truetype'),
+         url('../font/OpenSans-Italic-webfont.svg#open_sansitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sansextrabold';
+    src: url('../font/OpenSans-ExtraBold-webfont.eot');
+    src: url('../font/OpenSans-ExtraBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/OpenSans-ExtraBold-webfont.woff') format('woff'),
+         url('../font/OpenSans-ExtraBold-webfont.ttf') format('truetype'),
+         url('../font/OpenSans-ExtraBold-webfont.svg#open_sansextrabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('../font/OpenSans-Bold-webfont.eot');
+    src: url('../font/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/OpenSans-Bold-webfont.woff') format('woff'),
+         url('../font/OpenSans-Bold-webfont.ttf') format('truetype'),
+         url('../font/OpenSans-Bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sansbold_italic';
+    src: url('../font/OpenSans-BoldItalic-webfont.eot');
+    src: url('../font/OpenSans-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/OpenSans-BoldItalic-webfont.woff') format('woff'),
+         url('../font/OpenSans-BoldItalic-webfont.ttf') format('truetype'),
+         url('../font/OpenSans-BoldItalic-webfont.svg#open_sansbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+article h2 { font-family: 'open_sanssemibold'; font-size: 40px; margin: 25px 0; line-height: 1em; }
+article h2 { font-family: 'open_sanssemibold'; font-size: 30px; margin: 25px 0; line-height: 1em; }
+
+.story { 
+	height: 1000px; 
+	padding: 0; 
+	margin: 0; 
+	width: 100%; 
+	max-width: 1920px; 
+	position: relative; 
+	margin: 0 auto; 
+	border-top: 1px solid rgba(255,255,255,0.3); 
+	border-bottom: 1px solid rgba(0,0,0,0.4); 
+	box-shadow: 0 0 50px rgba(0,0,0,0.8);
+}
+
+#first { background: url(../images/puckered.png) 50% 0 no-repeat fixed; }
+#second { background: url(../images/hommevisitenquete.jpg) 50% 0 no-repeat fixed; }
+#fourth { background: url(../images/hommevisitenquete2.jpg) 50% 0 no-repeat fixed; }
+#third { background: url(../images/hommevisitenquete1.jpg) 50% 0 no-repeat fixed; }
+#theend { background: url(../images/puckered.png) 50% bottom no-repeat fixed; }
+
+/* Introduction */
+#first .smashinglogo { 
+	background: url(../images/HCRLogo.png) 50% 100px no-repeat fixed; 
+	min-height: 1000px; 
+	padding: 0; 
+	margin: 0; 
+	width: 100%; 
+	max-width: 1920px; 
+	position: relative; 
+	margin: 0 auto;
+ }
+#first article { width: 100%; top: 300px; position: absolute; text-align: center; }
+#first article p,
+#first article a { color: #ccc; }
+#first article a { text-decoration: underline; }
+#first article a:hover { color: #fff; }
+
+/* Background Only */
+#second { padding: 50px 0;}
+#second article { 
+	background: url(../images/grain.png) repeat #333; 
+	color: #fff; 
+	width: 445px; 
+	margin-left: 100px; 
+	padding: 10px 20px; 
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.5); 
+	line-height: 1.5em; 
+	box-shadow: 0 0 25px rgba(0,0,0,0.3); 
+	border: 1px solid rgba(150,150,150,0.1);
+ }
+#second article p { margin-bottom: 25px; }
+#second article a { color: #ff0;}
+
+/* Photograph */
+#third article {  
+	background: url(../images/grain.png) repeat #333; 
+	color: #fff; 
+	padding: 10px 20px; 
+	margin: 100px 0 0 60%; 
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.5); 
+	line-height: 1.5em; 
+	color: #fff; 
+	position: absolute; 
+	top: 0; box-shadow: 0 0 25px rgba(0,0,0,0.3); 
+	border: 1px solid rgba(150,150,150,0.1);
+ }
+#third .photograph { background: url(../images/photo1.png) transparent 40% 100px no-repeat fixed; min-height: 1000px; padding: 0; margin: 0; width: 100%; max-width: 1920px; position: relative; margin: 0 auto; }
+#third article p { width: 300px; margin-bottom: 25px; }
+
+/* HTML5 Video */
+#fourth article {  
+	margin-left: 10%; 
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.5); 
+	line-height: 1.5em; 
+	position: absolute; 
+	top: 0;
+	background: url(../images/grain.png) repeat #333; 
+	color: #fff; 
+	width: 300px; 
+	margin-left: 60px; 
+	padding: 10px 20px; 
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.5); 
+	box-shadow: 0 0 25px rgba(0,0,0,0.3); 
+	border: 1px solid rgba(150,150,150,0.1);
+	
+	
+ }
+#fourth article p {  margin: 50px 0;font-size: 15px; }
+#fourth video { position: fixed; left: 50%; box-shadow: 0 0 25px rgba(0,0,0,0.7); z-index: 1;}
+
+/* The End */
+#theend article { 
+	width: 100%; 
+	top: 30px; 
+	position: absolute; 
+	text-align: center;
+	color: #fff; 
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.5); 
+	line-height: 3.5em; 
+ }
+#theend article p,
+#theend article a { 
+	color: #ffe; 
+	font-size: 30px;
+	}
+#theend article a { text-decoration: underline; }
+#theend article a:hover { color: #fff; }
+#theend .byebye { 
+	background: url(../images/key.jpg) 20% 20px no-repeat fixed;
+	height: 500px;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	max-width: 1920px;
+	position:
+	relative;
+	margin: 0 auto;
+	}
+
+
